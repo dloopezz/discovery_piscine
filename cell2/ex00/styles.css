@@ -1,0 +1,15 @@
+table {
+	width: 100%;
+}
+
+td {
+	border: black 2px solid;
+}
+
+#first-elem{
+	background-color: aquamarine;
+}
+
+#sec-elem{
+	background-color: peru;
+}

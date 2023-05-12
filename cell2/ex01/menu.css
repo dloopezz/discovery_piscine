@@ -1,0 +1,38 @@
+.menu {
+	display: inline-block;
+}
+
+.button {
+	background-color: firebrick;
+	font-family: Arial, Helvetica, sans-serif;
+	color: white;
+	padding: 20px 80px;
+	font-size: 20px;
+	border: none;
+}
+
+.elems {
+	display: none;
+}
+
+.elems a {
+	color: black;
+	background-color: rgb(237, 128, 128);
+	text-align: center;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.menu:hover .elems{
+	display: block;
+}
+
+.elems a:hover {
+	background-color: #fcbcbc
+}
+
+.menu:hover .button {
+	background-color: rgb(132, 24, 24);
+
+}

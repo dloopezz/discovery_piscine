@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Balloon</title>
+	
+	<style>
+		body {
+			display: grid;
+			place-items: center;
+			height: 1200px;
+		}
+		#balloon {
+			background-color: red;
+			height: 200px;
+			width: 200px;
+			border-radius: 200px;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div id="balloon" onclick="increaseBalloon(10)" onmouseover="reduceBalloon(-5)"></div>
+
+	<script>
+			let balloon = document.getElementById('balloon');
+			let size = 200;
+			let colorIndex = 0;
+			let colors = ["red", "green", "blue"];
+
+			function increaseBalloon(increase)
+			{
+				size += increase;
+				
+				if (size < 200)
+					size = 200;
+				else if (size >= 420)
+					size = 200;
+				balloon.style.height = size + "px";
+				balloon.style.width = size + "px";
+				colorIndex++;
+				if (colorIndex >= colors.length)
+					colorIndex = 0;
+				balloon.style.backgroundColor = colors[colorIndex];
+			}
+			function reduceBalloon(reduce)
+			{
+				size += reduce;
+				 
+				if (size < 200)
+					size = 200;
+				else if (size >= 420)
+					size = 200;
+				balloon.style.height = size + "px";
+				balloon.style.width = size + "px";
+				colorIndex--;
+				if (colorIndex < 0)
+					colorIndex = 2;
+				balloon.style.backgroundColor = colors[colorIndex];
+			}
+	</script>
+</body>
+</html>

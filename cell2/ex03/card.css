@@ -1,0 +1,77 @@
+body, html {
+	height: 100%;
+	width: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+	color: black;
+}
+
+thead {
+	height: 100px;
+}
+
+.title {
+	font-size: 30px;
+}
+
+.center {
+	height: 600px;
+	width: 100px;
+}
+
+td {
+	text-align: center;
+	width: 100%;
+	display: block;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+tbody {
+	width: 400px;
+	height: 500px;
+	box-shadow: 0px 0px 10px #1c1c1c;
+}
+
+.profile {
+	height: 500px;
+}
+
+.user {
+	margin: 15px 0 15px 0;
+}
+
+.level {
+	margin: 0 0 15px 0;
+	color: grey;
+}
+
+.icons {
+	margin: 40px 0 0 0;
+}
+
+.contact {
+	padding-top: 50px;
+	color: white;
+}
+
+button {
+	width: 100%;
+	font-size: 20px;
+	text-decoration: none;
+	background-color: #1c1c1c;
+	padding: 40px;
+}
+
+.contact a {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	padding-right: 90px;
+	padding-left: 90px;
+	
+	color: white;
+	text-decoration: none;
+}

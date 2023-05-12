@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calc</title>
+	<script>
+		function doCalc() {
+			let firstNum = parseInt(document.getElementById("first").value, 10);
+			let secNum = parseInt(document.getElementById("second").value, 10);
+			let operator = document.getElementById("operator");
+			let select = operator.options[operator.selectedIndex].value;
+			let sum = document.getElementById("sum");
+			let res = document.getElementById("res");
+			let mult = document.getElementById("mult");
+			let div = document.getElementById("div");
+			let mod = document.getElementById("mod");
+			let result;
+
+			if (select == "sum")
+				result = parseFloat(firstNum) + parseFloat(secNum);
+			if (select == "res")
+				result = parseFloat(firstNum) - parseFloat(secNum);
+			if (select == "mult")
+				result = parseFloat(firstNum) * parseFloat(secNum);
+			if (select == "div")
+				result = parseFloat(firstNum) / parseFloat(secNum);
+			if (select == "mod")
+				result = parseFloat(firstNum) % parseFloat(secNum);
+
+			function validateKey(event) {
+				let key = (event.which) ? event : event.keyCode;
+
+				if (key == 45)
+					return false;
+				else if ((key >= 48 && key <= 57) && (key == 8))
+					return true;
+				else
+					return false;
+			}
+			
+			if ((select == "div" || select == "mod") && secNum == 0)
+			{
+				alert("It´s over 9000");
+				console.log("It´s over 9000");
+			}
+			else if (firstNum >= 0 && secNum >= 0) {
+				alert(result);
+				console.log(result);
+			}
+			else
+				alert("Error :(")
+
+			setTimeout(reminder, 30000);
+			function reminder(){
+				alert("Please, use me")
+			}
+		}
+		
+	</script>
+</head>
+<body>
+	<div class="container">
+		<p>Enter the numbers:</p>
+		<input type="text" id="first" />
+		<select id="operator">
+			<option>Choose</option>
+			<option value="sum" id="sum">+</option>
+			<option value="res" id="res">-</option>
+			<option value="mult" id="mult">*</option>
+			<option value="div" id="div">/</option>
+			<option value="mod" id="mod">%</option>
+		</select>
+		<input type="text" id="second" /><br>
+		<input type="submit" value="Try Me!" onclick="doCalc()">
+		<p id="result"></p>
+	</div>
+</body>
+</html>

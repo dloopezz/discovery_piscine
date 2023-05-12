@@ -1,0 +1,15 @@
+body {
+	display: grid;
+	place-content: center;
+	height: 1200px;
+}
+
+button {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	background-color: #34495e;
+	color: #e4f1fe;
+	padding: 30px 70px;
+	border-radius: 20px;
+	text-decoration: none;
+}
